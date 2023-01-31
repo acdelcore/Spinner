@@ -1,0 +1,14 @@
+from kivy.app import App
+from kivy.uix.spinner import Spinner
+
+class ExpirationSpinner(Spinner):
+    def __init__(self, **kwargs):
+        super(ExpirationSpinner, self).__init__(**kwargs)
+        self.values = ['01-01-2024', '01-01-2025', '01-01-2026']
+
+class MyApp(App):
+    def build(self):
+        return ExpirationSpinner()
+
+if __name__ == '__main__':
+    MyApp().run()
